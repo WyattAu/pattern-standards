@@ -1,0 +1,19 @@
+> llms.txt — WyattAu pattern-standards canon. The authoritative design-
+> pattern catalog: 107 constructs (foundations T1–T50, field P1–P50,
+> frontier X1–X7), 8 refusals, 24 baseline-tier defaults. Consume
+> PATTERN-CORE.md for the canon and references/ for per-domain practice.
+
+# pattern-standards
+
+- [PATTERN-CORE](PATTERN-CORE.md): the canon — doctrine, baseline tier, refusals, full catalog, adoption procedure
+- [Foundations: types & algebra](references/foundations-types.md): parse-don't-validate, typestate, session types, OCap, effects (T1–T10)
+- [Foundations: execution & reactive](references/foundations-execution.md): structured concurrency, supervision, STM, salsa, durable coroutines (T11–T20)
+- [Foundations: state & time](references/foundations-state.md): event sourcing, CRDTs, bitemporal, double-entry, e-graphs (T21–T30)
+- [Foundations: distributed](references/foundations-distributed.md): sagas, outbox, fencing, DST, gossip, tail latency (T31–T42)
+- [Foundations: interfaces & AI](references/foundations-interfaces.md): declarative UI, HATEOAS, Datalog, constrained decoding, sandboxes (T43–T50)
+- [Field: full-stack & schema](references/field-fullstack.md): version lenses, parity gates, snapshot cursors, temporal anchors (P1–P10)
+- [Field: numerical & financial](references/field-numerical.md): partition operators, units, as-of guards, ledger checksums (P11–P20)
+- [Field: concurrency & reliability](references/field-concurrency.md): staleness contracts, retry budgets, criticality shedding (P21–P30)
+- [Field: probabilistic & agentic](references/field-agentic.md): prompt quarantine, cascades, memoization, spend leases (P31–P40)
+- [Field: security & evolution](references/field-security.md): RLS scopes, wide events, crypto-shredding, burn-rate gates (P41–P50)
+- [Frontier](references/frontier.md): epistemic types, choreography, constraint manifolds, spec-as-source (X1–X7)
