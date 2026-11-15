@@ -2,8 +2,8 @@
 
 The WyattAu canon for design patterns: 107 constructs across three
 series, 8 named refusals, and a 24-pattern baseline tier, per
-2026-11 standards. Projection source for the future `estate-patterns`
-skill; consumable directly by reading
+2026-11 standards. Projection source for the `wyattau-patterns`
+skill (standards-dist); consumable directly by reading
 [`PATTERN-CORE.md`](PATTERN-CORE.md).
 
 | Series | Range | Stance | Patterns |

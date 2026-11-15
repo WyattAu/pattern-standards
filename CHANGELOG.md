@@ -10,3 +10,6 @@
 - Series scheme: T (proven structural primitives), P (problem-driven
   field constructs, numbered per source material), X (research-grade,
   pilot+ADR only). Cross-references use bare series IDs and resolve.
+- `wyattau-patterns` skill projection landed via standards-dist
+  (rev-pinned 8227cd1); installed at
+  `~/.config/opencode/skills/wyattau-patterns`.

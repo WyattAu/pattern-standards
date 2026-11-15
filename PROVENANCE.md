@@ -3,4 +3,4 @@
 | Artifact | Source | Built by |
 |---|---|---|
 | PATTERN-CORE.md, references/* | this repo (the canon itself) | hand-authored, ADR-gated |
-| estate-patterns skill | this repo | standards-dist build (planned projection; no skill exists yet — the canon lands first, the projection follows) |
+| wyattau-patterns skill | this repo | standards-dist build, rev-pinned (PROVENANCE.yml in `skills/pattern-standards`); installed at `~/.config/opencode/skills/wyattau-patterns`. Refresh by rerunning `standards-dist/build.sh` — never hand-edit the projection (SC-11). |
