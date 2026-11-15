@@ -1,6 +1,6 @@
 > llms.txt — WyattAu pattern-standards canon. The authoritative design-
-> pattern catalog: 159 constructs (foundations T1–T50, field P1–P102,
-> frontier X1–X7), 8 refusals, 25 baseline-tier defaults, and a 29-node
+> pattern catalog: 176 constructs (foundations T1–T50, field P1–P119,
+> frontier X1–X7), 12 refusals, 25 baseline-tier defaults, and a 31-node
 > task routing graph. Consume PATTERN-CORE.md for the canon,
 > references/decision-graph.md for deterministic pattern selection, and
 > references/ for per-domain practice.
@@ -8,7 +8,7 @@
 # pattern-standards
 
 - [PATTERN-CORE](PATTERN-CORE.md): the canon — doctrine, baseline tier, refusals, full catalog, adoption procedure, task routing graph (§9)
-- [Decision graph](references/decision-graph.md): task-type routing; 29 nodes with MANDATORY sets, ASK branches, REFUSE edges
+- [Decision graph](references/decision-graph.md): task-type routing; 31 nodes with MANDATORY sets, ASK branches, REFUSE edges
 - [Foundations: types & algebra](references/foundations-types.md): parse-don't-validate, typestate, session types, OCap, effects (T1–T10)
 - [Foundations: execution & reactive](references/foundations-execution.md): structured concurrency, supervision, STM, salsa, durable coroutines (T11–T20)
 - [Foundations: state & time](references/foundations-state.md): event sourcing, CRDTs, bitemporal, double-entry, e-graphs (T21–T30)
@@ -28,4 +28,7 @@
 - [Field: execution & trading](references/field-execution.md): order slicing, routing, fill reconciliation, TCA, data budgets, kill switch (P87–P92)
 - [Field: safety & margins](references/field-safety.md): degraded modes, watchdogs, 2oo3 voting, margin budgets (P93–P95, P100)
 - [Field: verification discipline](references/field-verification.md): verify-every-layer, auto-blessed goldens, MC/DC gates (P96–P97, P99)
+- [Field: networking & time](references/field-networking.md): deadline propagation, DNS discipline, overlap-guarded cron (P103–P105)
+- [Field: data-layer discipline](references/field-data-layer.md): session hygiene, consumer inbox, sticky read-after-write (P106–P108)
+- [Field: ML lifecycle](references/field-ml.md): train/serve skew guards, model registry, experiment bucketing + SRM (P111–P113)
 - [Frontier](references/frontier.md): epistemic types, choreography, constraint manifolds, spec-as-source (X1–X7)

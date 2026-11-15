@@ -59,6 +59,20 @@
   grounding line. Canon gates mechanized: `scripts/check-canon.py`
   and `make ci` (AGENTS.md rule 9); catalog split to
   `references/catalog.md`.
+- Third expansion round P103–P119 (17 patterns, all Proven) closing
+  the residual gap analysis: networking and time discipline
+  (`field-networking.md`: deadline propagation, DNS discipline,
+  overlap-guarded jobs), data-layer discipline (`field-data-layer.md`:
+  session hygiene, consumer inbox, sticky read-after-write), ML
+  lifecycle (`field-ml.md`: train/serve skew guards, model registry,
+  experiment bucketing + SRM), plus appends: query-count assertions
+  (testing), data contracts (data evolution), JWT validation, crypto
+  agility, upload hardening (security), restore drills and cardinality
+  budgets (operations), cost budgets (safety). Refusals grow to 12
+  (R9 org-process, R10 framework idioms, R11 hardware co-design, R12
+  experiment peeking). Graph grows to 31 nodes (N30 time budgets, N31
+  dataset publishing). `check-canon` now also enforces refusal-count
+  claims.
 - Canon gates mechanized: `scripts/check-canon.py` (ID resolution,
   catalog mirror, node-set equality, count/range/node-count claims) and
   a Makefile (`make ci` = lint + check), AGENTS.md rule 9. Catalog

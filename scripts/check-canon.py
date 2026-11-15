@@ -134,6 +134,7 @@ def main() -> int:
 
     # 4. Count claims
     total = sum(len(reg[s]) for s in "TPX")
+    r_total = len(re.findall(r"^\| R\d+ \|", core, re.M))
     for fname, pat in [("PATTERN-CORE.md", r"(\d+) patterns in three series"),
                        ("README.md", r"(\d+) constructs"),
                        ("llms.txt", r"(\d+) constructs")]:
@@ -142,6 +143,12 @@ def main() -> int:
             violations.append(f"{fname}: no count claim matching {pat!r}")
         elif int(m.group(1)) != total:
             violations.append(f"{fname}: claims {m.group(1)} patterns, actual {total}")
+    for fname in ("PATTERN-CORE.md", "README.md", "llms.txt"):
+        for m in re.finditer(r"(\d+) named refusals|(\d+) refusals\b", texts[ROOT / fname]):
+            n = int(m.group(1) or m.group(2))
+            if n != r_total:
+                line = texts[ROOT / fname][:m.start()].count(chr(10)) + 1
+                violations.append(f"{fname}:{line}: refusal-count claim {n} != {r_total}")
 
     # 5. Baseline claim
     bm = re.search(r"a (\d+)-pattern baseline tier", core)
