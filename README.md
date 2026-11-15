@@ -1,7 +1,7 @@
 # pattern-standards
 
-The WyattAu canon for design patterns: 107 constructs across three
-series, 8 named refusals, and a 24-pattern baseline tier, per
+The WyattAu canon for design patterns: 120 constructs across three
+series, 8 named refusals, and a 25-pattern baseline tier, per
 2026-11 standards. Projection source for the `wyattau-patterns`
 skill (standards-dist); consumable directly by reading
 [`PATTERN-CORE.md`](PATTERN-CORE.md).
@@ -9,10 +9,10 @@ skill (standards-dist); consumable directly by reading
 | Series | Range | Stance | Patterns |
 |---|---|---|---|
 | Foundations (T) | T1–T50 | proven primitives, default-adopt where domain applies | 50 |
-| Field constructs (P) | P1–P50 | problem-driven, adopt on named trigger | 50 |
+| Field constructs (P) | P1–P63 | problem-driven, adopt on named trigger | 63 |
 | Frontier (X) | X1–X7 | research-grade, pilot + ADR only | 7 |
 
-**107 patterns. 8 named refusals. 24 baseline-tier defaults.**
+**120 patterns. 8 named refusals. 25 baseline-tier defaults.**
 
 Doctrine lives in PATTERN-CORE §1: every pattern here removes a
 failure mode from human vigilance and embeds it in a type, an
@@ -31,6 +31,8 @@ practice per domain lives in [`references/`](references/):
 | [`field-concurrency.md`](references/field-concurrency.md) | staleness contracts, retry budgets, criticality shedding, fault injection (P21–P30) |
 | [`field-agentic.md`](references/field-agentic.md) | prompt quarantine, cascades, memoization, spend leases (P31–P40) |
 | [`field-security.md`](references/field-security.md) | RLS scopes, wide events, crypto-shredding, burn-rate gates (P41–P50) |
+| [`field-operations.md`](references/field-operations.md) | circuit breaker, bulkheads, DLQs, webhook receivers, drain, trace context (P51–P54, P62–P63) |
+| [`field-data-evolution.md`](references/field-data-evolution.md) | OCC, backfills, contract tests, strangler, ACLs, IDs, rollups (P55–P61) |
 | [`frontier.md`](references/frontier.md) | epistemic types, choreography, constraint manifolds, spec-as-source (X1–X7) |
 | [`decision-graph.md`](references/decision-graph.md) | task-type routing: 18 nodes, MANDATORY sets, ASK branches, REFUSE edges (§9) |
 

@@ -1,6 +1,6 @@
 > llms.txt — WyattAu pattern-standards canon. The authoritative design-
-> pattern catalog: 107 constructs (foundations T1–T50, field P1–P50,
-> frontier X1–X7), 8 refusals, 24 baseline-tier defaults, and an 18-node
+> pattern catalog: 120 constructs (foundations T1–T50, field P1–P63,
+> frontier X1–X7), 8 refusals, 25 baseline-tier defaults, and a 21-node
 > task routing graph. Consume PATTERN-CORE.md for the canon,
 > references/decision-graph.md for deterministic pattern selection, and
 > references/ for per-domain practice.
@@ -19,4 +19,6 @@
 - [Field: concurrency & reliability](references/field-concurrency.md): staleness contracts, retry budgets, criticality shedding (P21–P30)
 - [Field: probabilistic & agentic](references/field-agentic.md): prompt quarantine, cascades, memoization, spend leases (P31–P40)
 - [Field: security & evolution](references/field-security.md): RLS scopes, wide events, crypto-shredding, burn-rate gates (P41–P50)
+- [Field: runtime operations](references/field-operations.md): circuit breaker, bulkheads, DLQs, webhook receivers, drain, trace context (P51–P54, P62–P63)
+- [Field: data integrity & evolution](references/field-data-evolution.md): OCC, backfills, contract tests, strangler, ACLs, IDs, rollups (P55–P61)
 - [Frontier](references/frontier.md): epistemic types, choreography, constraint manifolds, spec-as-source (X1–X7)

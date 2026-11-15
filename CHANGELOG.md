@@ -21,3 +21,11 @@
   18 task nodes with MANDATORY sets, ASK branches, REFUSE edges; pattern
   selection is now a deterministic traversal. Canon `llms.txt` created
   (AGENTS rule 7).
+- Field series expanded P51–P63 (13 patterns, all Proven): runtime
+  operations (circuit breaker, bulkhead, DLQ, webhook receiver
+  hardening, graceful drain, trace context) in `field-operations.md`;
+  data integrity and evolution (optimistic concurrency, checkpointed
+  backfill, contract tests, strangler fig, anti-corruption layer,
+  time-ordered IDs, bucketed rollups) in `field-data-evolution.md`.
+  Baseline tier grows to 25 (P51). Graph grows to 21 nodes (N19-N21)
+  plus four worked chain examples.
