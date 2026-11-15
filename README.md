@@ -1,6 +1,6 @@
 # pattern-standards
 
-The WyattAu canon for design patterns: 120 constructs across three
+The WyattAu canon for design patterns: 136 constructs across three
 series, 8 named refusals, and a 25-pattern baseline tier, per
 2026-11 standards. Projection source for the `wyattau-patterns`
 skill (standards-dist); consumable directly by reading
@@ -9,10 +9,10 @@ skill (standards-dist); consumable directly by reading
 | Series | Range | Stance | Patterns |
 |---|---|---|---|
 | Foundations (T) | T1–T50 | proven primitives, default-adopt where domain applies | 50 |
-| Field constructs (P) | P1–P63 | problem-driven, adopt on named trigger | 63 |
+| Field constructs (P) | P1–P79 | problem-driven, adopt on named trigger | 79 |
 | Frontier (X) | X1–X7 | research-grade, pilot + ADR only | 7 |
 
-**120 patterns. 8 named refusals. 25 baseline-tier defaults.**
+**136 patterns. 8 named refusals. 25 baseline-tier defaults.**
 
 Doctrine lives in PATTERN-CORE §1: every pattern here removes a
 failure mode from human vigilance and embeds it in a type, an
@@ -33,6 +33,9 @@ practice per domain lives in [`references/`](references/):
 | [`field-security.md`](references/field-security.md) | RLS scopes, wide events, crypto-shredding, burn-rate gates (P41–P50) |
 | [`field-operations.md`](references/field-operations.md) | circuit breaker, bulkheads, DLQs, webhook receivers, drain, trace context (P51–P54, P62–P63) |
 | [`field-data-evolution.md`](references/field-data-evolution.md) | OCC, backfills, contract tests, strangler, ACLs, IDs, rollups (P55–P61) |
+| [`field-testing.md`](references/field-testing.md) | property tests, golden masters, mutation, fuzzing, builders, flake quarantine (P64–P69) |
+| [`field-api.md`](references/field-api.md) | tolerant reader, schema registry, error envelope, list contract, deprecation (P70–P74) |
+| [`field-deployment.md`](references/field-deployment.md) | canary, blue-green, shadow traffic, cohorts, attested artifacts (P75–P79) |
 | [`frontier.md`](references/frontier.md) | epistemic types, choreography, constraint manifolds, spec-as-source (X1–X7) |
 | [`decision-graph.md`](references/decision-graph.md) | task-type routing: 18 nodes, MANDATORY sets, ASK branches, REFUSE edges (§9) |
 

@@ -29,3 +29,11 @@
   time-ordered IDs, bucketed rollups) in `field-data-evolution.md`.
   Baseline tier grows to 25 (P51). Graph grows to 21 nodes (N19-N21)
   plus four worked chain examples.
+- Field series expanded P64–P79 (16 patterns, all Proven) across three
+  new pillars: test strategy (`field-testing.md`: property-based,
+  golden masters, mutation, fuzzing, builders, flake quarantine), API
+  surface (`field-api.md`: tolerant reader, schema registry, error
+  envelope, list contract, deprecation protocol), and deployment
+  (`field-deployment.md`: canary analysis, blue-green, shadow traffic,
+  exposure cohorts, content-addressed attested artifacts). Graph grows
+  to 24 nodes (N22 test suite, N23 API surface, N24 deploy/release).
