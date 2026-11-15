@@ -23,3 +23,5 @@ normative. Rules for agents editing this repo:
 9. `make ci` (lint + scripts/check-canon.py) passes before every push:
    ID resolution, catalog mirror, node-set equality, and count claims
    are mechanical, not judgment calls.
+10. Decision-graph node blocks use the fixed K:/M:/A:/R: line format;
+    `scripts/route.py` parses it, so format drift breaks the router.

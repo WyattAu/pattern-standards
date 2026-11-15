@@ -112,13 +112,20 @@ def main() -> int:
             violations.append(f"catalog.md: {s}-series mirror broken; "
                               f"missing rows: {missing or 'none'}; extra rows: {extra or 'none'}")
 
-    # 3. Node set equality
+    # 3. Node set equality + graph block format
     core = texts[ROOT / "PATTERN-CORE.md"]
     graph = texts[ROOT / "references" / "decision-graph.md"]
     c_rows, g_rows, g_heads = node_rows(core, graph)
     if not (c_rows == g_rows == g_heads):
         violations.append(f"node sets diverge: CORE §6 {len(c_rows)}, "
                           f"graph index {len(g_rows)}, graph headings {len(g_heads)}")
+    blocks = re.split(r"^### (N\d+) · ", graph, flags=re.M)
+    for i in range(1, len(blocks), 2):
+        nid, body = blocks[i], blocks[i + 1]
+        body = body.split("## ")[0]
+        for key in ("K:", "M:", "A:", "R:"):
+            if not re.search(rf"^{key} ", body, re.M):
+                violations.append(f"decision-graph.md: node {nid} missing {key} line")
 
     # 3b. Node-count claims ("NN-node", "NN nodes") in living claim files only
     #     (CHANGELOG entries are historical; reference prose may discuss

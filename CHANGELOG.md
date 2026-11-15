@@ -2,6 +2,12 @@
 
 ## 2026-11-15
 
+- Graph traversal became a script: `scripts/route.py --task|--node|
+  --list` parses decision-graph.md's fixed K:/M:/A:/R: node format and
+  emits the node block (AGENTS.md rule 10; skill-forge doctrine:
+  deterministic computation is a script, not prose). decision-graph.md
+  rewritten in that format (3,086 to ~2,300 words); check-canon gained
+  the block-format check; build.sh now vendors route.py into the skill.
 - Canon founded: PATTERN-CORE (doctrine, 24-pattern baseline tier,
   8 refusals, adoption procedure) plus the full catalog:
   foundations T1–T50 in five `references/foundations-*.md` files,
