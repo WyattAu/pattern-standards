@@ -45,3 +45,8 @@
   reconciliation, TCA, data-budget adaptation, kill switch). One
   Emerging stamp (P82), twelve Proven. Graph grows to 27 nodes (N25
   PII processing, N26 trading execution, N27 secrets/identity).
+- Canon gates mechanized: `scripts/check-canon.py` (ID resolution,
+  catalog mirror, node-set equality, count/range/node-count claims) and
+  a Makefile (`make ci` = lint + check), AGENTS.md rule 9. Catalog
+  tables moved from PATTERN-CORE §6-§8 to `references/catalog.md`
+  (CORE drops to ~1300 words; pointers updated).

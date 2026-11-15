@@ -8,7 +8,7 @@
 # pattern-standards
 
 - [PATTERN-CORE](PATTERN-CORE.md): the canon — doctrine, baseline tier, refusals, full catalog, adoption procedure, task routing graph (§9)
-- [Decision graph](references/decision-graph.md): task-type routing; 18 nodes with MANDATORY sets, ASK branches, REFUSE edges
+- [Decision graph](references/decision-graph.md): task-type routing; 27 nodes with MANDATORY sets, ASK branches, REFUSE edges
 - [Foundations: types & algebra](references/foundations-types.md): parse-don't-validate, typestate, session types, OCap, effects (T1–T10)
 - [Foundations: execution & reactive](references/foundations-execution.md): structured concurrency, supervision, STM, salsa, durable coroutines (T11–T20)
 - [Foundations: state & time](references/foundations-state.md): event sourcing, CRDTs, bitemporal, double-entry, e-graphs (T21–T30)

@@ -20,3 +20,6 @@ normative. Rules for agents editing this repo:
 7. llms.txt regenerates whenever PATTERN-CORE structure changes.
 8. `voice-lint.py --strict` (standards canon) passes on all Markdown:
    no em-dashes, no PR-6 fillers, no PR-8 hedges.
+9. `make ci` (lint + scripts/check-canon.py) passes before every push:
+   ID resolution, catalog mirror, node-set equality, and count claims
+   are mechanical, not judgment calls.

@@ -56,8 +56,8 @@ delta, exactly, at every step.
    adjustment.
 
 Exit: criteria 1-3 green moves X5 from Pilot to adopted-in-canon for
-conserved-quantity domains (PATTERN-CORE §8 stance update, CHANGELOG
-entry). Criterion 4 feeds `references/frontier.md` X5 Analysis.
+conserved-quantity domains (references/catalog.md stance update,
+CHANGELOG entry). Criterion 4 feeds `references/frontier.md` X5 Analysis.
 
 ## 5. Rejected alternatives
 

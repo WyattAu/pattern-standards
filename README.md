@@ -39,7 +39,8 @@ practice per domain lives in [`references/`](references/):
 | [`field-compliance.md`](references/field-compliance.md) | consent facts, DSAR pipeline, purpose tags, hash-chained audit, workload identity, rotation, break-glass (P80–P86) |
 | [`field-execution.md`](references/field-execution.md) | order slicing, routing, fill reconciliation, TCA, data budgets, kill switch (P87–P92) |
 | [`frontier.md`](references/frontier.md) | epistemic types, choreography, constraint manifolds, spec-as-source (X1–X7) |
-| [`decision-graph.md`](references/decision-graph.md) | task-type routing: 18 nodes, MANDATORY sets, ASK branches, REFUSE edges (§9) |
+| [`decision-graph.md`](references/decision-graph.md) | task-type routing: 27 nodes, MANDATORY sets, ASK branches, REFUSE edges (§6) |
+| [`catalog.md`](references/catalog.md) | the full ID catalog with maturity stamps (mirrors all reference headings) |
 
 ## Status
 
