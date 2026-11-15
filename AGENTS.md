@@ -5,7 +5,7 @@ normative. Rules for agents editing this repo:
 
 1. Every pattern addition gets an ID in its series, a Failure line
    naming the concrete failure mode, and a maturity stamp.
-2. Refusals are named explicitly — a standard that only lists virtues
+2. Refusals are named explicitly; a standard that only lists virtues
    is not a standard. New refusals need an `adr/` entry.
 3. No filler: tables for enumerable facts, prose only for causal
    chains (DOC-STYLE). One pattern, one block: Failure, Mechanism,
@@ -18,3 +18,5 @@ normative. Rules for agents editing this repo:
 6. Date-stamped changes in CHANGELOG.md; series-level changes, new
    baseline-tier entries, or new refusals need an `adr/` entry.
 7. llms.txt regenerates whenever PATTERN-CORE structure changes.
+8. `voice-lint.py --strict` (standards canon) passes on all Markdown:
+   no em-dashes, no PR-6 fillers, no PR-8 hedges.

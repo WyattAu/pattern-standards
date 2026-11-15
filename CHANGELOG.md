@@ -13,3 +13,7 @@
 - `wyattau-patterns` skill projection landed via standards-dist
   (rev-pinned 8227cd1); installed at
   `~/.config/opencode/skills/wyattau-patterns`.
+- Register conformance pass: 89 em-dashes removed estate-canon-wide
+  (PRESENT PR-6/PR-8, DOC-STYLE character rule); `voice-lint.py
+  --strict` now passes on all canon Markdown (AGENTS.md rule 8).
+- ADR-0001 opened: X5 conservation-operator pilot contract (PROPOSED).
