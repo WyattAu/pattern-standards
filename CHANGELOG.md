@@ -17,3 +17,7 @@
   (PRESENT PR-6/PR-8, DOC-STYLE character rule); `voice-lint.py
   --strict` now passes on all canon Markdown (AGENTS.md rule 8).
 - ADR-0001 opened: X5 conservation-operator pilot contract (PROPOSED).
+- Task routing graph added (PATTERN-CORE §9, `references/decision-graph.md`):
+  18 task nodes with MANDATORY sets, ASK branches, REFUSE edges; pattern
+  selection is now a deterministic traversal. Canon `llms.txt` created
+  (AGENTS rule 7).

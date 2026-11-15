@@ -32,6 +32,7 @@ practice per domain lives in [`references/`](references/):
 | [`field-agentic.md`](references/field-agentic.md) | prompt quarantine, cascades, memoization, spend leases (P31–P40) |
 | [`field-security.md`](references/field-security.md) | RLS scopes, wide events, crypto-shredding, burn-rate gates (P41–P50) |
 | [`frontier.md`](references/frontier.md) | epistemic types, choreography, constraint manifolds, spec-as-source (X1–X7) |
+| [`decision-graph.md`](references/decision-graph.md) | task-type routing: 18 nodes, MANDATORY sets, ASK branches, REFUSE edges (§9) |
 
 ## Status
 
