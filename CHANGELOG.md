@@ -37,3 +37,11 @@
   (`field-deployment.md`: canary analysis, blue-green, shadow traffic,
   exposure cohorts, content-addressed attested artifacts). Graph grows
   to 24 nodes (N22 test suite, N23 API surface, N24 deploy/release).
+- Field series expanded P80–P92 (13 patterns) across two more pillars:
+  compliance and privacy (`field-compliance.md`: consent facts, DSAR
+  pipeline, purpose tagging, hash-chained audit, workload identity,
+  zero-downtime rotation, break-glass) and execution
+  (`field-execution.md`: order slicing, smart routing, fill
+  reconciliation, TCA, data-budget adaptation, kill switch). One
+  Emerging stamp (P82), twelve Proven. Graph grows to 27 nodes (N25
+  PII processing, N26 trading execution, N27 secrets/identity).
