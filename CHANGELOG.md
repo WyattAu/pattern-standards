@@ -45,8 +45,26 @@
   reconciliation, TCA, data-budget adaptation, kill switch). One
   Emerging stamp (P82), twelve Proven. Graph grows to 27 nodes (N25
   PII processing, N26 trading execution, N27 secrets/identity).
+- Gap-close round P93–P102 (10 patterns, all Proven) from the
+  industry-gap analysis (avionics/defense, LLVM, NVIDIA, SpaceX,
+  Netflix, Palantir): safety and margins (`field-safety.md`: P93
+  fail-operational modes, P94 watchdog + heartbeat, P95 2oo3 voting,
+  P100 margin budgets), verification discipline
+  (`field-verification.md`: P96 verify-every-layer, P97 auto-blessed
+  goldens, P99 MC/DC gates), plus P98 dress-rehearsal gate
+  (`field-deployment.md`), P101 scheduled chaos experiments
+  (`field-operations.md`), P102 ontology + lineage
+  (`field-data-evolution.md`). Graph grows to 29 nodes (N28 degraded
+  modes, N29 release rehearsal). CORE §1 gains the Vulkan/LLVM
+  grounding line. Canon gates mechanized: `scripts/check-canon.py`
+  and `make ci` (AGENTS.md rule 9); catalog split to
+  `references/catalog.md`.
 - Canon gates mechanized: `scripts/check-canon.py` (ID resolution,
   catalog mirror, node-set equality, count/range/node-count claims) and
   a Makefile (`make ci` = lint + check), AGENTS.md rule 9. Catalog
   tables moved from PATTERN-CORE §6-§8 to `references/catalog.md`
   (CORE drops to ~1300 words; pointers updated).
+- Industry-gap round closed: P93–P102 (safety, verification, rehearsal,
+  chaos, margins, ontology + lineage), graph to 29 nodes (N28, N29),
+  CORE §1 grounding line added. Gate caught and forced three claim
+  drifts on first run (stale P range, two stale node counts).

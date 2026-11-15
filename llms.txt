@@ -1,6 +1,6 @@
 > llms.txt — WyattAu pattern-standards canon. The authoritative design-
-> pattern catalog: 149 constructs (foundations T1–T50, field P1–P92,
-> frontier X1–X7), 8 refusals, 25 baseline-tier defaults, and a 27-node
+> pattern catalog: 159 constructs (foundations T1–T50, field P1–P102,
+> frontier X1–X7), 8 refusals, 25 baseline-tier defaults, and a 29-node
 > task routing graph. Consume PATTERN-CORE.md for the canon,
 > references/decision-graph.md for deterministic pattern selection, and
 > references/ for per-domain practice.
@@ -8,7 +8,7 @@
 # pattern-standards
 
 - [PATTERN-CORE](PATTERN-CORE.md): the canon — doctrine, baseline tier, refusals, full catalog, adoption procedure, task routing graph (§9)
-- [Decision graph](references/decision-graph.md): task-type routing; 27 nodes with MANDATORY sets, ASK branches, REFUSE edges
+- [Decision graph](references/decision-graph.md): task-type routing; 29 nodes with MANDATORY sets, ASK branches, REFUSE edges
 - [Foundations: types & algebra](references/foundations-types.md): parse-don't-validate, typestate, session types, OCap, effects (T1–T10)
 - [Foundations: execution & reactive](references/foundations-execution.md): structured concurrency, supervision, STM, salsa, durable coroutines (T11–T20)
 - [Foundations: state & time](references/foundations-state.md): event sourcing, CRDTs, bitemporal, double-entry, e-graphs (T21–T30)
@@ -19,11 +19,13 @@
 - [Field: concurrency & reliability](references/field-concurrency.md): staleness contracts, retry budgets, criticality shedding (P21–P30)
 - [Field: probabilistic & agentic](references/field-agentic.md): prompt quarantine, cascades, memoization, spend leases (P31–P40)
 - [Field: security & evolution](references/field-security.md): RLS scopes, wide events, crypto-shredding, burn-rate gates (P41–P50)
-- [Field: runtime operations](references/field-operations.md): circuit breaker, bulkheads, DLQs, webhook receivers, drain, trace context (P51–P54, P62–P63)
-- [Field: data integrity & evolution](references/field-data-evolution.md): OCC, backfills, contract tests, strangler, ACLs, IDs, rollups (P55–P61)
+- [Field: runtime operations](references/field-operations.md): circuit breaker, bulkheads, DLQs, webhook receivers, drain, trace context, chaos experiments (P51–P54, P62–P63, P101)
+- [Field: data integrity & evolution](references/field-data-evolution.md): OCC, backfills, contract tests, strangler, ACLs, IDs, rollups, ontology + lineage (P55–P61, P102)
 - [Field: test strategy](references/field-testing.md): property tests, golden masters, mutation, fuzzing, builders, flake quarantine (P64–P69)
 - [Field: API surface](references/field-api.md): tolerant reader, schema registry, error envelope, list contract, deprecation (P70–P74)
-- [Field: deployment & release](references/field-deployment.md): canary, blue-green, shadow traffic, cohorts, attested artifacts (P75–P79)
+- [Field: deployment & release](references/field-deployment.md): canary, blue-green, shadow traffic, cohorts, attested artifacts, dress rehearsal (P75–P79, P98)
 - [Field: compliance & privacy](references/field-compliance.md): consent facts, DSAR pipeline, purpose tags, hash-chained audit, workload identity, rotation, break-glass (P80–P86)
 - [Field: execution & trading](references/field-execution.md): order slicing, routing, fill reconciliation, TCA, data budgets, kill switch (P87–P92)
+- [Field: safety & margins](references/field-safety.md): degraded modes, watchdogs, 2oo3 voting, margin budgets (P93–P95, P100)
+- [Field: verification discipline](references/field-verification.md): verify-every-layer, auto-blessed goldens, MC/DC gates (P96–P97, P99)
 - [Frontier](references/frontier.md): epistemic types, choreography, constraint manifolds, spec-as-source (X1–X7)
