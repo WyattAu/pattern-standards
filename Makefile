@@ -2,7 +2,7 @@
 
 VOICE ?= $(HOME)/dev/src/standards/scripts/voice-lint.py
 
-.PHONY: help lint check ci
+.PHONY: help lint check eval ci
 
 help:
 	@echo "lint      - voice-lint --strict over all Markdown (SKIP when the standards canon is absent)"
@@ -19,4 +19,7 @@ lint:
 check:
 	@python3 scripts/check-canon.py
 
-ci: lint check
+eval:
+	@python3 scripts/route.py --eval
+
+ci: lint check eval
