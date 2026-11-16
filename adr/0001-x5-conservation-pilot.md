@@ -1,6 +1,6 @@
 # ADR-0001: X5 pilot (conservation-spanning domain operators)
 
-Status: PROPOSED, 2026-11-15. Pilot contract for frontier construct X5
+Status: PILOT (in progress), started 2026-11-16. Originally PROPOSED 2026-11-15. Pilot contract for frontier construct X5
 (`references/frontier.md`); adoption of X5 beyond the pilot requires the
 evidence defined in §4.
 
@@ -58,6 +58,27 @@ delta, exactly, at every step.
 Exit: criteria 1-3 green moves X5 from Pilot to adopted-in-canon for
 conserved-quantity domains (references/catalog.md stance update,
 CHANGELOG entry). Criterion 4 feeds `references/frontier.md` X5 Analysis.
+
+## 4a. Evidence log
+
+- 2026-11-16: operator surface implemented as `accessctl` 0.2.0
+  `src/grants.rs` (f1d2a7e): six operators, private ledger fields, zero
+  setters, `GrantError` for every rejected parameter, state unchanged
+  after any `Err` (unit-tested).
+- Criterion 2 (escape audit) PASS: 0 `pub fn set_*`/`pub fn with_*`;
+  `GrantLedger` fields all private; mutating methods are exactly the six
+  operators (read helpers `amount_of`/`is_active`/`outstanding`/
+  `active_amount_for`/`authorize` are private or pure reads). Cargo
+  clippy clean.
+- Criterion 1 (property test) PASS at CI scale: 512 proptest seeds x
+  250-operation sequences + a 10,000-step deterministic xorshift soak
+  (`long_walk_single_seed`), conservation asserted after every step;
+  17/17 tests green, replayable from seed. The 24-hour fuzz window is
+  deferred to a nightly CI soak (not yet wired: pending M1-style
+  workflow addition to accessctl).
+- Criterion 3 (shipped feature) PARTIAL: `authorize(subject, required)`
+  + `active_amount_for` shipped on the operator surface; consumer
+  adoption and second-reader review pending.
 
 ## 5. Rejected alternatives
 

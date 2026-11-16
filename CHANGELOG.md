@@ -1,6 +1,7 @@
 # CHANGELOG
 
 ## 2026-11-15
+- ADR-0001 X5 pilot started: operator surface shipped in accessctl 0.2.0; escape audit + property-test criteria green (evidence in adr/0001 §4a); pending: consumer feature review + nightly soak.
 
 - Graph traversal became a script: `scripts/route.py --task|--node|
   --list` parses decision-graph.md's fixed K:/M:/A:/R: node format and
