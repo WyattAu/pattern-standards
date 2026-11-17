@@ -1,6 +1,7 @@
 # CHANGELOG
 
 ## 2026-11-15
+- M2 foundation: adoption format (`references/adoption-format.md`) + `scripts/adoption-check.py` mechanical validation; accessctl is the first declaring repo.
 - ADR-0001 X5 pilot started: operator surface shipped in accessctl 0.2.0; escape audit + property-test criteria green (evidence in adr/0001 §4a); pending: consumer feature review + nightly soak.
 
 - Graph traversal became a script: `scripts/route.py --task|--node|

@@ -25,3 +25,6 @@ normative. Rules for agents editing this repo:
    are mechanical, not judgment calls.
 10. Decision-graph node blocks use the fixed K:/M:/A:/R: line format;
     `scripts/route.py` parses it, so format drift breaks the router.
+11. Estate repos declare pattern adoption in `PATTERN_ADOPTION.md`
+    (format: references/adoption-format.md), validated by
+    `scripts/adoption-check.py`; unknown IDs and path-less claims fail.

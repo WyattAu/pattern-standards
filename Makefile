@@ -2,7 +2,7 @@
 
 VOICE ?= $(HOME)/dev/src/standards/scripts/voice-lint.py
 
-.PHONY: help lint check eval ci
+.PHONY: help lint check eval adoption ci
 
 help:
 	@echo "lint      - voice-lint --strict over all Markdown (SKIP when the standards canon is absent)"
@@ -22,4 +22,7 @@ check:
 eval:
 	@python3 scripts/route.py --eval
 
-ci: lint check eval
+adoption:
+	@python3 scripts/adoption-check.py --file PATTERN_ADOPTION.md
+
+ci: lint check eval adoption
