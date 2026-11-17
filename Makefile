@@ -23,6 +23,6 @@ eval:
 	@python3 scripts/route.py --eval
 
 adoption:
-	@python3 scripts/adoption-check.py --file PATTERN_ADOPTION.md
+	@python3 scripts/adoption-check.py --file PATTERN_ADOPTION.md --canon .
 
 ci: lint check eval adoption
