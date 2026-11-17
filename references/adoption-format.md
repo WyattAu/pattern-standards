@@ -13,7 +13,7 @@ One row per pattern with a real relationship to the repo. Format:
 ```markdown
 | Pattern | Status | Evidence |
 |---|---|---|
-| T13 | adopted | src/lib.rs:1 |
+| T13 | adopted | src/lib.rs:1 (pure cores; middleware is the shell) |
 | P51 | planned | breaker integration, tracking issue #14 |
 | P57 | refused | R2 (single-team monorepo, T6 codegen binds both sides) |
 ```
@@ -24,8 +24,9 @@ One row per pattern with a real relationship to the repo. Format:
    evidence), `partial` (adopted for some paths, noted), `planned`
    (scheduled, with a tracking reference), `refused` (with a refusal id
    R1-R12 or a written reason), `n/a` (domain never applies).
-2. **Evidence for adopted/partial**: a file path (with optional `:line`)
-   that exists. A claim without a path is a violation.
+2. **Evidence for adopted/partial**: a file path (with optional `:line`,
+   optionally followed by a parenthetical note) that exists. A claim
+   without a path is a violation.
 3. **Refused rows must cite** a canon refusal id or a written reason;
    refusals are decisions, not omissions.
 4. **Planned rows are dated** in the Evidence column (target quarter or

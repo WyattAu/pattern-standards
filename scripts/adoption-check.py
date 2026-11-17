@@ -74,7 +74,9 @@ def main() -> int:
         if status in ("adopted", "partial") and evidence in ("", "-", "todo"):
             violations.append(f"{pid}: {status} rows need an evidence path (file[:line])")
         elif evidence and evidence not in ("", "-", "todo"):
-            path_part = evidence.split(":")[0]
+            # a parenthetical note after the path is allowed:
+            #   "src/lib.rs (pure cores; middleware is the shell)"
+            path_part = re.split(r"\s+\(", evidence)[0].split(":")[0].strip()
             if not (f.parent / path_part).is_file() and not Path(path_part).is_file():
                 violations.append(f"{pid}: evidence path {path_part!r} does not exist")
         if status == "refused" and not re.search(r"R\d+", evidence):

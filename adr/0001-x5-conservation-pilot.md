@@ -76,6 +76,9 @@ CHANGELOG entry). Criterion 4 feeds `references/frontier.md` X5 Analysis.
   17/17 tests green, replayable from seed. The 24-hour fuzz window is
   deferred to a nightly CI soak (not yet wired: pending M1-style
   workflow addition to accessctl).
+- Criterion 1 addendum: nightly soak WIRED (accessctl
+  `.github/workflows/nightly-soak.yml`, cron 03:30 UTC, PROPTEST_CASES=4096);
+  each run is one window of the cumulative evidence.
 - Criterion 3 (shipped feature) PARTIAL: `authorize(subject, required)`
   + `active_amount_for` shipped on the operator surface; consumer
   adoption and second-reader review pending.
