@@ -76,11 +76,28 @@ def main() -> int:
         if status in ("adopted", "partial") and evidence in ("", "-", "todo"):
             violations.append(f"{pid}: {status} rows need an evidence path (file[:line])")
         elif evidence and evidence not in ("", "-", "todo"):
-            # a parenthetical note after the path is allowed:
-            #   "src/lib.rs (pure cores; middleware is the shell)"
-            path_part = re.split(r"\s+\(", evidence)[0].split(":")[0].strip()
-            if not (f.parent / path_part).is_file() and not Path(path_part).is_file():
-                violations.append(f"{pid}: evidence path {path_part!r} does not exist")
+            # evidence cells may list several paths (separated by , + ; vs
+            # and/because prose), each optionally backticked, with :line
+            # suffixes and parenthetical notes: "the async shell is
+            # src/lib.rs and src/tower.rs is the middleware (core)"
+            # -> validate the slash-containing tokens as paths
+            known_dirs = {"crates", "src", "tests", "docs", "examples", "benches",
+                          "lean", "supply-chain", ".github", "scripts", "references",
+                          "dot_agents", "adr"}
+            def is_path_token(tok: str) -> bool:
+                tok = tok.rstrip(".")
+                if tok.startswith("."):
+                    return True  # dotfiles/dotdirs (.github/...)
+                if "/" in tok:
+                    first, last = tok.split("/")[0], tok.split("/")[-1]
+                    return first in known_dirs or "." in last
+                return "." in tok
+            for tok in re.findall(r"[\w./-]+", evidence.replace("`", "")):
+                tok = tok.split(":")[0].strip()
+                if not is_path_token(tok) or tok in ("e.g", "etc", "vs"):
+                    continue
+                if not (f.parent / tok).exists() and not Path(tok).exists():
+                    violations.append(f"{pid}: evidence path {tok!r} does not exist")
         if status == "refused" and not re.search(r"R\d+", evidence):
             violations.append(f"{pid}: refused rows must cite a refusal id (R1-R12)")
 
