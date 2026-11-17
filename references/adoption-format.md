@@ -26,10 +26,10 @@ One row per pattern with a real relationship to the repo. Format:
    R1-R12 or a written reason), `n/a` (domain never applies).
 2. **Evidence for adopted/partial**: a file path (with optional `:line`)
    that exists. A claim without a path is a violation.
-3. **Refused rows must cite** a canon refusal id or a written reason —
+3. **Refused rows must cite** a canon refusal id or a written reason;
    refusals are decisions, not omissions.
 4. **Planned rows are dated** in the Evidence column (target quarter or
-   tracking issue) — a plan without a date is a wish (refusal-shaped).
+   tracking issue); a plan without a date is a wish (refusal-shaped).
 5. **The file is checked, not read**: any ID that does not resolve in
    the canon catalog fails the gate (stale-ID drift is how adoption
    files die).
