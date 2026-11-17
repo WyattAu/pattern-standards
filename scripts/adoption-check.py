@@ -86,6 +86,8 @@ def main() -> int:
                           "dot_agents", "adr"}
             def is_path_token(tok: str) -> bool:
                 tok = tok.rstrip(".")
+                if re.fullmatch(r"\d+(\.\d+)*", tok):
+                    return False  # version numbers (0.3.0), not paths
                 if tok.startswith("."):
                     return True  # dotfiles/dotdirs (.github/...)
                 if "/" in tok:
