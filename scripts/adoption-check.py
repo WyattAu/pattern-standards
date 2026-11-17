@@ -8,6 +8,8 @@ pattern-standards references/adoption-format.md, CONTEXT-CORE CX-4/CX-5):
   2. every status is in the closed vocabulary
   3. evidence paths exist (file[:line])
   4. refused rows cite a canon refusal ID (R1-R12) or a named reason
+  5. a `<!-- adoption: canon -->` marker declares a canon repo: zero
+     rows is then valid (the canon IS the catalog)
 
 Usage:
   adoption-check.py --file PATTERN_ADOPTION.md [--canon <pattern-standards checkout>]
@@ -62,7 +64,7 @@ def main() -> int:
     violations: list[str] = []
     t = f.read_text(encoding="utf-8", errors="replace")
     rows = ROW.findall(t)
-    if not rows:
+    if not rows and "adoption: canon" not in t:
         violations.append("no adoption table rows found (format: references/adoption-format.md)")
     for pid, status, evidence in rows:
         pid, status = pid.strip(), status.strip()
