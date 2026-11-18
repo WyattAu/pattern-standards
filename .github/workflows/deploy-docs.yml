@@ -1,0 +1,44 @@
+name: deploy-docs
+
+# The docs-compiler SSG tenant: the pattern canon rendered as a static
+# site (32 pages, SEO floor, chrome) on every main push. Docs-only
+# repo — no bun, no islands; just the published docs-compiler crate.
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+      - name: install docs-compiler (published crate, pinned)
+        run: cargo install --locked --version 0.7.3 docs-compiler
+      - name: build the canon site
+        run: docs-compiler build . --out _site
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
