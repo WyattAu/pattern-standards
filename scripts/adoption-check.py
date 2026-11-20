@@ -100,8 +100,13 @@ def main() -> int:
                     continue
                 if not (f.parent / tok).exists() and not Path(tok).exists():
                     violations.append(f"{pid}: evidence path {tok!r} does not exist")
-        if status == "refused" and not re.search(r"R\d+", evidence):
-            violations.append(f"{pid}: refused rows must cite a refusal id (R1-R12)")
+        if status == "refused":
+            # spec (adoption-format rule 3): refused rows cite a refusal id
+            # OR a written reason pointer (a path/date in the evidence)
+            has_rid = re.search(r"R\d+", evidence)
+            has_pointer = ("/" in evidence or re.search(r"\d{4}-\d{2}-\d{2}", evidence))
+            if not (has_rid or has_pointer):
+                violations.append(f"{pid}: refused rows must cite a refusal id (R1-R12) or a written-reason pointer")
 
     for v in violations:
         print(f"V {v}")
