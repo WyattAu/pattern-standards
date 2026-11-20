@@ -14,12 +14,12 @@ algebraic operator, a compiler pass, or a runtime invariant.
 
 ## Contents
 
-- [Pattern CORE](/PATTERN-CORE.html) — doctrine, series taxonomy, refusal list
-- [Standards index](/STANDARDS-INDEX.html) — the full pattern table with tiers
-- [References](/references/catalog.html) — per-domain deep practice (T/P/X series)
-- [Decision graph](/references/decision-graph.html) — trigger → pattern routing
-- [ADRs](/adr/) — architecture decisions for the canon itself
-- [Provenance](/PROVENANCE.html) — source lineage and license
+- [Pattern CORE](/PATTERN-CORE.html) - doctrine, series taxonomy, refusal list
+- [Standards index](/STANDARDS-INDEX.html) - the full pattern table with tiers
+- [References](/references/catalog.html) - per-domain deep practice (T/P/X series)
+- [Decision graph](/references/decision-graph.html) - trigger → pattern routing
+- [ADRs](/adr/) - architecture decisions for the canon itself
+- [Provenance](/PROVENANCE.html) - source lineage and license
 
 Projection source for the `wyattau-patterns` skill; consumable
 directly with `references/`.
