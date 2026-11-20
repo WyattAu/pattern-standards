@@ -1,4 +1,4 @@
-base_url = "http://localhost:8126"
+base_url = "https://wyattau.github.io"
 site_title = "WyattAu Pattern Standards"
 author = "Wyatt"
 ai_crawlers = "allow"
