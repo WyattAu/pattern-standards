@@ -25,7 +25,7 @@ jobs:
       - uses: dtolnay/rust-toolchain@stable
       - uses: Swatinem/rust-cache@v2
       - name: install docs-compiler (published crate, pinned)
-        run: cargo install --locked --version 0.7.7 docs-compiler
+        run: cargo install --locked --version 0.7.8 docs-compiler
       - name: build the canon site
         run: docs-compiler build . --out _site --base-path /pattern-standards
       - uses: actions/configure-pages@v5
